@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
+//import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -70,7 +70,7 @@ public class CalculadoraTest {
 
     @DisplayName("Valida múltiplas somas com informações em CSV")
     @ParameterizedTest
-    @CsvSource({ "1.0, 1.0, 2.0", "2.0, 3.0, 6.0" })
+    @CsvSource({ "1.0, 1.0, 2.0", "2.0, 3.0, 5.0" })
     void validaMultiplasSomasCSV(double parcela1, double parcela2, double resultadoEsperado) {
         assertEquals(resultadoEsperado, calculadora.soma(parcela1, parcela2));
     }
